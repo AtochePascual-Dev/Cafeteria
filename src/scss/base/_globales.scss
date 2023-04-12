@@ -1,0 +1,64 @@
+@use "./variables" as v;
+
+/* * GLOBALES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-width: 32rem;
+  font-size: 1.6rem;
+  line-height: 2;
+  font-family: v.$fuente_principal;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 0 5rem 0;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 3.2rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+select,
+textarea {
+  outline: none;
+}
+
+[class*="-container"] {
+  width: min(95%, 120rem);
+  margin: 0 auto;
+}
