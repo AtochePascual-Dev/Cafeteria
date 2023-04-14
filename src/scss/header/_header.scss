@@ -35,10 +35,11 @@
   &__title {
     line-height: 1.2;
     text-align: center;
+    text-transform: uppercase;
     color: v.$blanco;
 
     @include m.tablet {
-      margin-bottom: 10rem;
+      margin-bottom: 15rem;
       font-size: 5rem;
     }
   }
