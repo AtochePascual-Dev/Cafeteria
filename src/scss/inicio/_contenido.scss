@@ -1,0 +1,20 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.main {
+  padding: 5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+  line-height: 1.8;
+  text-align: center;
+  background-color: v.$blanco;
+
+  @include m.tablet {
+    position: relative;
+    margin-top: -10rem;
+    padding: 10rem;
+    gap: 10rem;
+  }
+}

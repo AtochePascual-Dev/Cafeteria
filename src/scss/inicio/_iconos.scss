@@ -1,0 +1,31 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.iconos {
+  width: 100%;
+  max-width: 80rem;
+  @include m.grid(1, 5rem);
+  justify-items: center;
+
+  @include m.tablet {
+    @include m.grid(3, 5rem);
+  }
+
+  &__img {
+    width: 10rem;
+
+    @include m.tablet {
+      width: 15rem;
+    }
+  }
+
+  &__texto {
+    font-size: 2.4rem;
+    font-family: v.$fuente_secundaria;
+    color: v.$primario;
+
+    @include m.tablet {
+      margin-top: 1rem;
+    }
+  }
+}
