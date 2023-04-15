@@ -61,6 +61,19 @@ h2 {
   }
 }
 
+.headeing-blanco {
+  @extend h2;
+  color: v.$blanco;
+
+  &::after {
+    display: unset;
+  }
+
+  span {
+    color: v.$blanco;
+  }
+}
+
 h3 {
   font-size: 3.2rem;
 }
