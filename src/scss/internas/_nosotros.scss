@@ -1,0 +1,42 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.nosotros {
+  display: grid;
+  justify-items: center;
+  gap: 5rem;
+
+  @include m.tablet {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+
+    picture {
+      border: 3rem solid v.$blanco;
+      box-shadow: 15px 5px 5px #e1e1e1;
+      transform: rotate(-6deg);
+    }
+  }
+
+  &__img {
+    @include m.tablet {
+      width: 100%;
+      max-width: 35rem;
+      height: auto;
+    }
+  }
+
+  &__textos {
+    display: grid;
+    gap: 2rem;
+
+    @include m.tablet {
+      text-align: start;
+    }
+
+    blockquote {
+      padding-left: 2rem;
+      text-align: start;
+      border-left: 1rem solid v.$primario;
+    }
+  }
+}
