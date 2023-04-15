@@ -1,0 +1,39 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.footer {
+  padding-bottom: 2rem;
+  text-align: center;
+  background-color: v.$primario;
+
+  &__content {
+    padding: 5rem 0;
+    display: grid;
+    gap: 5rem;
+    background-color: v.$blanco;
+
+    @include m.tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__box {
+    display: grid;
+    gap: 2rem;
+
+    p {
+      font-family: v.$fuente_secundaria;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-family: v.$fuente_secundaria;
+    color: v.$secundario;
+  }
+
+  &__copy {
+    margin-top: 2rem;
+    color: v.$blanco;
+  }
+}
