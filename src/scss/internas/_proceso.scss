@@ -1,2 +1,72 @@
 @use "../base/variables" as v;
 @use "../base/mixins" as m;
+
+.main-proceso {
+  gap: 4rem;
+}
+
+.proceso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+
+  @include m.tablet {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-auto-flow: dense;
+
+    &:nth-child(even) {
+      grid-template-columns: 1fr 0.5fr;
+    }
+  }
+
+  @include m.desktop {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+
+    &:nth-child(even) {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__figure {
+    @include m.tablet {
+      height: 100%;
+    }
+  }
+  &__figure--derecha {
+    @include m.tablet {
+      grid-column: 2 / 3;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 50rem;
+
+    @include m.tablet {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__textos {
+    max-width: 50rem;
+    text-align: start;
+  }
+
+  h3 {
+    margin-bottom: 2rem;
+    text-align: start;
+    color: v.$primario;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 15rem;
+      height: 2px;
+      border-bottom: 2px solid v.$secundario;
+    }
+  }
+}
