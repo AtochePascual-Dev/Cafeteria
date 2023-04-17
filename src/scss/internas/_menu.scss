@@ -1,0 +1,36 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.menu__texto {
+  max-width: 50rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  background-image: url(../../../build/img/taza.jpg);
+  background-repeat: no-repeat;
+  background-position: center 100%;
+  background-size: 50rem;
+
+  @media (min-width: 500px) {
+    grid-template-rows: 1fr 20rem;
+  }
+
+  @include m.tablet {
+    max-width: unset;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: unset;
+    background-position: right center;
+    background-size: 25rem;
+  }
+
+  @include m.desktop {
+    background-size: 38rem;
+  }
+
+  p {
+    min-height: 37.4rem;
+
+    @include m.tablet {
+      min-height: unset;
+    }
+  }
+}
