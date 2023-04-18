@@ -39,3 +39,5 @@ para visualizar cambios agregados.
 No se ha recibido contribuciones hasta este momento.
 
 # preview
+
+![](https://i.imgur.com/tU8WRzU.png)
