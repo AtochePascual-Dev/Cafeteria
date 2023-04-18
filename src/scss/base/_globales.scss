@@ -1,0 +1,104 @@
+@use "./variables" as v;
+@use "./mixins" as m;
+
+/* * GLOBALES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-width: 32rem;
+  font-size: 1.6rem;
+  font-family: v.$fuente_principal;
+  background-color: v.$cafeClaro;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 5rem 0;
+  line-height: 1.2;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 3rem;
+  color: v.$primario;
+  line-height: 1.5;
+
+  @include m.tablet {
+    font-size: 3.6rem;
+  }
+
+  &::after {
+    content: "";
+    width: 8rem;
+    height: 8rem;
+    margin: 0 auto;
+    display: block;
+    background-image: url("../../../build/img/cafe.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  span {
+    font-size: 2rem;
+    display: block;
+    color: v.$secundario;
+  }
+}
+
+.headeing-blanco {
+  @extend h2;
+  color: v.$blanco;
+
+  &::after {
+    display: unset;
+  }
+
+  span {
+    color: v.$blanco;
+  }
+}
+
+h3 {
+  font-size: 3.2rem;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input,
+select,
+textarea {
+  outline: none;
+}
+
+[class*="-container"] {
+  width: min(95%, 120rem);
+  margin: 0 auto;
+}
