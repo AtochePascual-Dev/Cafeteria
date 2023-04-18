@@ -4,8 +4,7 @@
 .nuestro-menu {
   padding: 10rem 0 15rem;
   background-color: v.$primario;
-  background-image: url("../../../build/img/menu_arriba.svg"),
-    url("../../../build/img/menu_abajo.svg");
+  background-image: url("../img/menu_arriba.svg"), url("../img/menu_abajo.svg");
   background-repeat: no-repeat;
   background-position: center 3rem, center 98%;
   background-size: 85%;
