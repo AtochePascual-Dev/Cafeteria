@@ -1,0 +1,52 @@
+@use "../base/variables" as v;
+@use "../base/mixins" as m;
+
+.contacto {
+  width: 100%;
+  max-width: 40rem;
+
+  @include m.tablet {
+    max-width: 60rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-image: url("../../../build/img/granos_cafe.jpg");
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 27rem;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  &__campo {
+    display: grid;
+    grid-template-columns: 9rem 1fr;
+    text-align: start;
+  }
+  &__label {
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__input,
+  &__select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid v.$primario;
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 1rem;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 700;
+    border: none;
+    color: v.$blanco;
+    background-color: v.$primario;
+    cursor: pointer;
+  }
+}
