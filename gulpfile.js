@@ -2,6 +2,7 @@ const { src, dest, watch, series } = require('gulp'); // npm i -D gulp
 const sass = require('gulp-sass')(require('sass')); // npm i -D sass gulp-sass
 const postcss = require('gulp-postcss'); // npm i -D gulp-postcss
 const autoprefixer = require('autoprefixer'); // npm i -D autoprefixer
+const sourcemaps = require('gulp-sourcemaps'); // npm i -D gulp-sourcemaps
 
 const imagemin = require('gulp-imagemin'); // npm i -D gulp-imagemin@7.1.0
 const webp = require('gulp-webp'); // npm i -D gulp-webp
@@ -10,8 +11,10 @@ const avif = require('gulp-avif'); // npm i -D gulp-avif
 
 function css(done) {
   src('./src/scss/app.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed' })) // expanded para debug and  compressed para minificar 
     .pipe(postcss([autoprefixer()]))
+    .pipe(sourcemaps.write('.'))
     .pipe(dest('./build/css'))
   done();
 };
